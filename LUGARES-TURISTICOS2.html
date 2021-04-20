@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/png" href="IMAGENES/FAVICON.png"> <!-- Icono de la pestaña de la pagina -->
+        <meta charset="utf-8">
+        <meta name="author" content="EQUIPO 2"/>
+        <meta name="description" content="lugares turisticos 2"/>
+        <title> LUGARES TURISTICOS </title>
+        <link rel="stylesheet" href="HOJAS-DE-ESTILO/volcan-estilo.css">
+        <link rel="stylesheet" href="HOJAS-DE-ESTILO/estilosfuncionpp.css">
+    </head>
+    <body>
+        <!--Login-->
+        <div id="divLogin">
+			<img src="IMAGENES/LoginImg.png" style="width:30px;height:auto" id="imgLogin" onclick="mostrar()">
+			<input type="button" value="Login" onclick="mostrar()" class="button" id="botonLogin"></input>
+
+			<form id="formLogin">
+				<p><label id="pUsuario" for="inputUsuario">Usuario</label></p>
+				<input type="text" id="inputUsuario" class="widthInputLog">
+
+				<p><label id="pContrasena" for="inputContra">Password</label></p>
+				<input type="password" id="inputContra" class="widthInputLog">
+
+				<p><input type="button" onclick="logearse()" value="Iniciar Sesion" id="BtnStartCloseSesion" class="button"></p>
+
+				<input type="button" value="Ocultar" onclick="ocultar()" class="button"></input>
+			</form>
+
+		</div>
+        <!--Div contenedor de logo de pagina, parte superior -->
+        <div id="bxbh">
+            <!-- Logo de la pagina -->
+            <a href="PAGINA-PRINCIPAL.html" title="Ir a Inicio"><img id="bh" src="IMAGENES/LOGO-GOBIERNO-ESTADO1.png"></a>
+        </div>
+        <!-- Titulo de la pagina -->
+        <h1 class="text" id="header"> ¡Lugares turisticos en el Estado de mexico! </h1>
+<br>
+        <!--navbar-->
+        <div id="divNavBar">
+            <div id="menu">
+                <ul>
+                    <li class="item"><a>Lugares Turisticos</a>
+                        <div id="subitem">
+                            <ul id="submenu1">
+                                <li><a href="LUGARES-TURISTICOS.html">Zoologico Zacango</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="item"><a href="EVENTOS.html">Eventos</a></li>
+                    <li class="item"><a href="HISTORIA.html">Historia</a></li>
+                    <li class="item"><a href="BOLSA-DE-TRABAJO.html">Bolsa de trabajo</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Subtitulo de la pagina -->
+        <h2 class="text" id="subtitulo">Volcan Popocatépetl</h2>
+        
+        <!-- Div contenedor de sección de cuadros de volcan -->
+        <div id="cajamadre">
+            <!-- Divs-filas de #cajamadre -->
+            <div class="fila">
+                <!-- Cada cuadro de texto y volcan -->
+                <div class="sectionfila" id="section1">
+                    <!-- Div imagen de volcan dentro de .sectionfila -->
+                    <div class="cuadro">
+                        <img src="IMAGENES/volcan.jfif" style="width: 100%; height:100%;">
+                    </div>
+                    <!-- Div texto dentro de .sectionfila -->
+                    <div class="bxinfo">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ipsum augue, maximus quis elementum in, iaculis eu erat. Aenean dictum quam sed mattis luctus. </p>
+                    </div>
+                </div>
+
+                <div class="sectionfila">
+                    <div class="cuadro">
+                        <img src="IMAGENES/volcan2.jpg" style="width: 100%; height: 100%;">
+                    </div>
+                    <div class="bxinfo">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ipsum augue, maximus quis elementum in, iaculis eu erat. Aenean dictum quam sed mattis luctus. </p>
+                    </div>
+                </div>
+
+                <div class="sectionfila">
+                    <div class="cuadro">
+                        <img src="IMAGENES/volcan3.jpg" style="width: 100%; height: 100%;">
+                    </div>
+                    <div class="bxinfo">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ipsum augue, maximus quis elementum in, iaculis eu erat. Aenean dictum quam sed mattis luctus. </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="fila">
+                <div class="sectionfila">
+                    <div class="cuadro">
+                        <img src="IMAGENES/volcan4.jpg" style="width: 100%; height: 100%;">
+                    </div>
+                     <div class="bxinfo">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ipsum augue, maximus quis elementum in, iaculis eu erat. Aenean dictum quam sed mattis luctus. </p>
+                    </div>
+                </div>
+
+                <div class="sectionfila">
+                    <div class="cuadro">
+                        <img src="IMAGENES/volcan5.jpg" style="width: 100%; height: 100%;">
+                    </div>
+                     <div class="bxinfo">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ipsum augue, maximus quis elementum in, iaculis eu erat. Aenean dictum quam sed mattis luctus. </p>
+                    </div>
+                </div>
+
+                <div class="sectionfila">
+                    <div class="cuadro">
+                        <img src="IMAGENES/volcan6.jpg" style="width: 100%; height: 100%;">
+                    </div>
+                     <div class="bxinfo">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ipsum augue, maximus quis elementum in, iaculis eu erat. Aenean dictum quam sed mattis luctus. </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- footer -->
+        <div id="footer">
+            <!-- Seccion de contáctanos -->
+			<div id="contfooter">
+				<form name="footerForm">
+					<p><label>Nombre: </label>
+					<input type="text" id="footerinpNombre"></p>
+
+					<p><label>Correo: </label>&nbsp;
+					<input type="email" name="" id="footerinpEmail"></p>
+
+					<p><label>Dudas o sugerencias</label></p>
+					<textarea rows="5" cols="50" id="footerdoubts"></textarea><br>
+
+					<input type="button" onclick="objcontacto()" value="Enviar" id="buttonContact">
+				</form>
+			</div>
+            <!-- Encabezado Contáctanos -->
+			<div id="bxcont">
+				<p>Contáctanos</p>
+			</div>
+            <!-- Imagen del estado dentro de footer -->
+			<div id="bximgestadof">
+				<img src="IMAGENES/LOGO-GOBIERNO-ESTADO1.png" alt="Imagen del gobierno del estado">
+			</div>
+            <!-- Copyright -->
+			<div id="bxcopy">
+				<p>TODOS LOS DERECHOS RESERVADOS|EQUIPO 2|CODELLEGE-OTO-2020</p>
+			</div>
+		</div>
+		<script src="FUNCIONES-JS/FUNCIONES-JS.js"></script>
+    </body>
+</html>

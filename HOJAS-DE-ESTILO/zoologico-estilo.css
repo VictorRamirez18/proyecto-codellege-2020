@@ -1,0 +1,265 @@
+body{
+	background-color:whitesmoke;
+	margin:0;
+	padding: 0;
+}
+/*Titulo de la pagina*/
+#header{
+	width: 50%;
+	margin: 2% auto;
+	font-size: 2.3vw;
+	text-align:center;
+}
+/*Barra de navegación*/
+#divNavBar{
+	border: 0px;
+	padding: 0px 0%;
+	margin-top: 5px;
+}
+	/*Div contenedor dentro de #divNabar*/
+#menu{
+	position: relative;
+	padding: 0px 0%;
+	margin-left: 0;
+}
+#menu > ul{ /*Afecta a los ul hijos directos de #menu*/
+	list-style: none;
+	width: 80%;
+	padding: 0px;
+	margin:0;
+	position: absolute;
+	margin-left: 10%;
+}
+#menu ul{
+	list-style: none;
+}
+	/*Elementos de lista de ul dentro de #menu*/
+#menu .item{
+	float: left;
+	width: 25%;
+	position: relative;
+}
+#menu .item a{ /*Enlaces "Lugares turisticos, Eventos, Historia y Bolsa de Trabajo"*/
+	text-align: center;
+	background-color: none;
+	color:purple;
+	text-decoration:none;
+	padding: 10px 20px;
+	height: 12px;
+	font-size: 1.5vw;
+	font-family: Arial;
+	color:purple;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#menu .item ul a{ /*Enlace "Volcan Popocatépetl"*/
+	height: 20px;
+	font-size: 1.2vw;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	width: auto;
+	display: flex;
+	position:inherit;
+	text-align: center;
+}
+	/*Menu desplegable de elemento "Lugares turísticos"*/
+#subitem{
+	position: absolute;
+	width: 100%;
+	padding:0px;
+}
+	/*Contenedor de elementos dentro de #subitem*/
+#menu #submenu1{
+	display: none;
+	padding-left: 0px;
+	margin-left: -3%;
+}
+#menu .item a:hover{
+	background-color: #FAEBD7;
+}
+#menu .item:hover #submenu1{
+	display: block;
+}
+/*Login*/
+#divLogin{
+	background: #9400D3;
+	position: absolute;
+	top: 4px;
+	right: 30px;
+	z-index: 1;
+	padding: 5px 1px;
+	border:2px solid #66e67979;
+	width:6%;
+	height:10px;
+	height:auto;
+	display: inline-block;
+	text-align: center;
+	display: flex;
+   	align-items: center;
+	justify-content: center;
+	margin-top: 7px;
+	border-radius: 50px;
+	color: white;   
+}
+#divLogin:hover{
+	background-color: #6A5ACD;
+}
+#formLogin{
+	display:none;
+}
+#divLogin .button{
+	color: white;
+	background:none;
+	font-family: rubik one;
+	font-size: 1.3vw;
+	border: none;
+	width: 70%;
+	height: 35px;
+	border-radius: 0px 10px 10px 0px;
+}
+#divLogin .button:hover{
+	color:white;
+}
+#formLogin input{
+	position: inherit;
+	width: 70%;
+}
+/*Subtitulo "Zoológico Zacango"*/
+#subtitulo{
+	clear: both;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	background-color: #808000;
+	margin-top:115px;
+	height: 50px;
+	color: white;
+	top:10px;
+	padding: 0px;
+}
+/*Div contenedor de seccion de cuadros de zoológico*/
+#cajamadre{
+	padding: 0% 0%;
+	border:2px hidden red;
+	height: 800px;
+	background-color: none;
+}
+/*Divs-filas de #cajamadre*/
+.fila{
+	border:2px hidden yellow;
+	display: flex;
+	padding:10px 5%;
+	height: 376px;
+}
+/*Cada cuadro de texto e imagen de zoológico*/
+.sectionfila{
+	border-radius: 20px;
+	background-color: #008000;
+	border:2px solid green;
+	padding: 10px 1%;
+	height: 356px;
+	width: 26%;
+	margin-left: 3.6%;
+}
+.cuadro{ /*Divs imagenes de volcan dentro de .sectionfila*/
+	border:2px hidden brown;
+	height: 60%;
+}
+.bxinfo{ /*Divs texto dentro de .sectionfila*/
+	margin-top:0px;
+	background-color: white;
+	height: 35%;
+	text-align: justify;
+	padding:5px;
+	font-size: 1.2vw;
+	border:2px hidden orange;
+}
+.sectionfila:hover img{
+	transform: scale(1.2);
+}
+.cuadro img{ /*Imagenes de zoológico dentro de .cuadro*/
+	border: 0px;
+	width: 100%;
+	height: 100%;
+}
+/*Div contenedor de logo de pagina, parte superior*/
+#bxbh{
+	position: absolute;
+	margin-left: 30px;
+	top:5px;
+}
+	/*Imagen logo de pagina*/
+#bh{
+	width: 10%;
+	height: auto;
+}
+#footer{
+	background:  rgb(38, 36, 61);
+	position: relative;
+	margin-top:0;
+	width: 100%;
+	height: 325px;
+	display: flex;
+}
+img{ /*Afecta a bximgestadof*/
+	max-width: 100%;
+}
+#bximgestadof{ /*Imagen estado dentro de footer*/
+	width: 25%;
+	height: auto;
+	position: absolute;
+	margin-left: 63%;
+	margin-top: 1%;
+}
+#bxcopy{ /*Texto de copyright*/
+	position: absolute;
+	width: auto;
+	margin-left: 53%;
+	margin-top: 17.3%;
+	font-size: 1.3vw;
+	color: white;
+}
+#contfooter{ /*Contenedor de formulario de contáctanos*/
+	color: white;
+	width: 30%;
+	background-color: rgb(38, 36, 61);
+	box-shadow: 5px 5px 5px 5px rgba(38, 36, 61, 0.623);
+	display: inline-block;
+	position: relative;
+	margin-top: 40px;
+	margin-left: 5%;
+	padding-left: 2px;
+}
+#confooter input{
+	width: 20%;
+}
+#contfooter #footerdoubts{
+	width: 90%;
+}
+#bxcont{ /*Titulo de contáctanos*/
+	color: white;
+	position: absolute;
+	display: inline-block;
+	font-size: 25px;
+	margin-left: 5%;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	border: 0px;
+	height:50px;
+}
+#buttonContact{	/*Boton enviar - contactanos*/
+	background-color: lightblue;
+	font-weight: bold;
+	color:navy;
+}
+#buttonContact:hover{ 
+	background-color: yellow;
+}
+/*Modificar propiedades cuando el ancho de la ventana mide menos de 800px*/
+@media only screen and (max-width: 800px) { 
+	#divLogin{
+		width:10%;
+	}
+}

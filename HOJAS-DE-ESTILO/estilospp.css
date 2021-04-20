@@ -1,0 +1,452 @@
+body{
+	background-color: white;
+	margin: 0px;
+	padding: 0px;
+}
+/*Caja fija  en la parte superior de la pagina*/
+#bxen{
+	background-color: rgb(38, 36, 61);
+	position: fixed;
+	top: 0%;
+	width: 100%;
+	height: 100px;
+	z-index: 1;
+}
+/*Barra de navegación*/
+#divNavBar{
+	border: 0px;
+	padding: 0px 0%;
+	margin-top: 45px;
+}
+	/*Div contenedor dentro de #divNabar*/
+#menu{
+	position: relative;
+	padding: 0px 0%;
+	margin-left: 0;
+}
+#menu > ul{ /*Afecta a los ul hijos directos de #menu*/
+	list-style: none;
+	width: 60%;
+	padding: 0px;
+	margin:0;
+	position: absolute;
+	margin-left: 20%;
+}
+#menu ul{
+	list-style: none;
+}
+	/*Elementos de lista de ul dentro de #menu*/
+#menu .item{
+	float: left;
+	width: 25%;
+	position: relative;
+}
+	/*Menu desplegable de elemento "Lugares turísticos"*/
+#subitem{
+	position: absolute;
+	width: 100%;
+	padding:0px;
+}
+	/*Contenedor de elementos dentro de #subitem*/
+#menu #submenu1{
+	/*margin-left: -3%;*/
+	display: none;
+	padding-left: 0px;
+} 
+#menu .item a{	/*Enlaces "Lugares turisticos, Eventos, Historia y Bolsa de Trabajo"*/
+	color: white;
+	text-align: center;
+	background-color: none;
+	text-decoration:none;
+	padding: 10px 20px;
+	height: 12px;
+	font-size: 1.3vw;
+	font-family: Arial;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#menu .item ul a{ /*Enlaces "Zoológico de Zacango, Volcan de Popocatépetl"*/
+	height: 20px;
+	background-color: rgb(38, 36, 61);
+	border: 0px;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	width: auto;
+	display: flex;
+	position:inherit;
+	text-align: center;
+	font-size: 1.2vw;
+}
+#menu .item a:hover{
+	background-color: #4a4a4a;
+}
+#menu .item:hover #submenu1{
+	display: block;
+}
+/*Login*/
+#divLogin{
+	border: 2px solid black;
+	background: #9400D3;
+	position: absolute;
+	top: 13px;
+	right: 5%;
+	z-index: 1;
+	padding: 5px 1px;
+	border:2px solid #66e67979;
+	width:6%;
+	height:auto;
+	display: inline-block;
+	text-align: center;
+	display: flex;
+   	align-items: center;
+	justify-content: center;
+	margin-top: 7px;
+	border-radius: 50px;
+	color: white;   
+}
+#formLogin{
+	display:none;
+}
+#divLogin .button{
+	color: white;
+	background:none;
+	font-family: rubik one;
+	font-size: 1.3vw;
+	border: none;
+	width: 70%;
+	height: 35px;
+	border-radius: 0px 10px 10px 0px;
+}
+#divLogin:hover{
+	background: #6A5ACD;
+	color:white;
+}
+#formLogin input{
+	position: inherit;
+	width: 70%;
+}
+/*Logo de la página*/
+#imgestado{
+	margin-left: 5%;
+	position: absolute;
+	display: 0px;
+	width: 10%;
+	height: auto;
+}
+/*Imagenes dentro de carrusel*/
+.imgs{
+	height: 370px;
+	width: 100%;
+}
+/*Carrusel*/
+.container-all{
+	overflow: hidden;
+	position: relative;
+	border-radius: 6px;
+	margin-top:7%;
+	height: 390px;
+	width: 100%;
+}
+.slide{
+	display: flex;
+	transform: translate3d(0, 0, 0);
+	transition: all 600ms;
+	animation-name: autoplay;
+	animation-duration: 20s;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+}
+.item-slide{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	flex-grow: 0;
+	width: 100%;
+	height: 100%;
+}
+	/*Cuadros pequeños dentro de carrusel*/
+.pagination{
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+.pagination-item{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid black;
+	width: 16px;
+	height: 16px;
+	border-radius: 4px;
+	overflow: hidden;
+	cursor: pointer;
+	background: rgba(255, 255, 255, 0.5);
+	margin: 0 10px;
+	text-align: center;
+	transition: all 300ms;
+}
+.pagination-item:hover{
+	transform: scale(2);
+}
+.pagination-item img{
+	display: inline-block;
+	max-width: none;
+	height: 100%;
+	transform: scale(1);
+	opacity: 0;
+	transition: all 300ms;
+}
+.pagination-item:hover img{
+	opacity: 1;
+	transform: scale(1);
+}
+input[id="1"]:checked ~ .slide{
+	animation: none;
+	transform: translate3d(0, 0, 0);
+}
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
+	background: #fff;
+}
+input[id="2"]:checked ~ .slide{
+	animation: none;
+	transform: translate3d(calc(-100% * 1), 0, 0);
+}
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
+	background: #fff;
+}
+input[id="3"]:checked ~ .slide{
+	animation: none;
+	transform: translate3d(calc(-100% * 2), 0, 0);
+}
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
+	background: #fff;
+}
+input[id="4"]:checked ~ .slide{
+	animation: none;
+	transform: translate3d(calc(-100% * 3), 0, 0);
+}
+input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
+	background: #fff;
+}
+input[id="5"]:checked ~ .slide{
+	animation: none;
+	transform: translate3d(calc(-100% * 4), 0, 0);
+}
+input[id="5"]:checked ~ .pagination .pagination-item[for="5"]{
+	background: #fff;
+}
+@keyframes autoplay{
+	20%{
+		transform: translate3d(calc(-100% * 0), 0, 0);
+	}
+	
+	40%{
+		transform: translate3d(calc(-100% * 1), 0, 0);
+	}
+	
+	60%{
+		transform: translate3d(calc(-100% * 2), 0, 0);
+	}
+	80%{
+		transform: translate3d(calc(-100% * 3), 0, 0);
+	}
+	100%{
+		transform: translate3d(calc(-100% * 4), 0, 0);
+	}
+}
+/*sección de tres primeras noticias*/
+#divcons{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 450px;
+}
+#divcons .divcon{	/*Cada noticia individual de #divcons*/
+	width: 30%;
+	margin-left: 1%;
+	text-align: center;
+}
+#divcons .divcon p{
+	text-align: justify;
+	height: 15%;
+}
+#divcon01{	/*Noticia individual 1 - #divcons*/
+	font-size: 1.5vw;
+	position: relative;
+	display:inline-block;
+	height: 100%;
+}
+
+#divcon02{	/*Noticia individual 2 - #divcons*/
+	font-size: 1.5vw;
+	position: relative;
+	margin-top: 0;
+	display:inline-block;
+	height: 100%;
+}
+#divcon03{	/*Noticia individual 3 - #divcons*/
+	font-size: 1.5vw;
+	position: relative;
+	background-color: white;
+	position: relative; 
+	margin-top:0;
+	height: 100%; 
+	display:inline-block;
+}
+#divcon03 img{
+	height: cover;
+}
+.hipers{	/*Titulos de todas las noticias*/
+	color: black;
+	font-size:1.5vw; 
+	font-family: fantasy;
+	text-align:center;
+}
+.imgsmn{	/*Imagenes de noticias dentro de #divcons*/
+	width: 100%;
+	height: 64%;
+}
+#conmas{	/*Div conocer mas*/
+	background-color: rgba(255, 255, 255, 0);
+	position: relative;
+	justify-content: center;
+	margin:5% auto;
+	width: 30%;
+	display: block;
+	font-size: 2vw;
+	padding: 0px;
+}
+#pconmas{
+	position: relative;
+	border-bottom: 2.5px solid rgb(180, 43, 43);
+	text-align: center;
+	background-color: white;
+	font-family: 'Franklin Gothic Medium';
+}
+/*Seccion de tres mapas de google maps*/
+#divcons2{
+	height: auto;
+	margin-bottom: 5%;
+	margin-top: 10%;
+	text-align: center;
+}
+#divcons2 .divcon{ /*Cada secccion individual de #divcons2*/
+	width: 30%;
+	height: 100%;
+	margin-left: 1%;
+	font-size: 1.3vw;
+}
+#divcons2 .divcon a{ /*Enlaces - titulos de cada seccion de mapas*/
+	font-size: 1.5vw;
+	text-align: center;
+	display: hidden;
+}
+#divcons2 .divcon .tohide{ /*"Ocultar" Enlace obligatorio al usar google maps*/
+	color: white;
+	pointer-events: none;
+	cursor: default;
+
+}
+#divcons2 .divcon iframe{ /*Cada mapa de google maps*/
+	width: 100%;
+}
+#divcons2 .divcon p{
+	text-align: justify;
+}
+#divcon1{	/*Mapa 1 de #divcons2*/
+	position: relative;
+	margin-top: 2%;
+	margin-left: 0px;
+	margin-right: 0px;
+	display:inline-block;
+}
+#divcon2{ /*Mapa 2 de #divcons2*/
+	position: relative;
+	margin-top: 0px;
+	margin-left: 0px;
+	display:inline-block;
+}
+#divcon3{ /*Mapa 3 de #divcons2*/
+	position: relative;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	display:inline-block;
+}
+/**/
+#footer{
+	background:  rgb(38, 36, 61);
+	position: relative;
+	margin-top:0;
+	width: 100%;
+	height: 325px;
+	display: flex;
+}
+img{ /*afecta al bximgestadof*/
+	max-width: 100%;
+}
+#bximgestadof{	/*Imagen estado dentro de footer*/
+	width: 25%;
+	height: auto;
+	position: absolute;
+	margin-left: 63%;
+	margin-top: 1%;
+}
+#bxcopy{	/*Texto de copyright*/
+	position: absolute;
+	width: auto;
+	margin-left: 53%;
+	margin-top: 17.3%;
+	font-size: 1.3vw;
+	color: white;
+}
+#contfooter{ /*Contenedor de formulario de contáctanos*/
+	color: white;
+	width: 30%;
+	background-color: rgb(38, 36, 61);
+	box-shadow: 5px 5px 5px 5px rgba(38, 36, 61, 0.623);
+	display: inline-block;
+	position: relative;
+	margin-top: 40px;
+	margin-left: 5%;
+	padding-left: 2px;
+}
+#confooter input{
+	width: 20%;
+}
+#contfooter #footerdoubts{
+	width: 90%;
+}
+#bxcont{ /*Titulo de contáctanos*/
+	color: white;
+	position: absolute;
+	display: inline-block;
+	font-size: 25px;
+	margin-left: 5%;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	border: 0px;
+	height:50px;
+}
+#buttonContact{ /*Boton enviar - contactanos*/
+	background-color: lightblue;
+	font-weight: bold;
+	color:navy;
+}
+#buttonContact:hover{
+	background-color: yellow;
+}
+/*Modificar propiedades cuando el ancho de la ventana mide menos de 800px*/
+@media only screen and (max-width: 800px) {
+	#divLogin{
+		width:10%;
+	}
+}
